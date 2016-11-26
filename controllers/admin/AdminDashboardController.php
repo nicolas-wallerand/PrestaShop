@@ -87,7 +87,7 @@ class AdminDashboardControllerCore extends AdminController
         }
 
         foreach ($modules as $module) {
-            if (isset($module->tab) && $module->tab == 'payments_gateways' && $module->id) {
+            if (isset($module->tab) && $module->tab === 'payments_gateways' && $module->id) {
                 $moduleClass = Module::getInstanceByName($module->name);
                 if (!$moduleClass->isEnabledForShopContext()) {
                     continue;
